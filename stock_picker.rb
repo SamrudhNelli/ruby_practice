@@ -1,5 +1,5 @@
 def stock_picker(array)
-  minsofar = array[0]; minindex = 0; minsofarindex = 0; maxindex = array.last; max = -99999
+  minsofar = array[0]; minindex = -1; minsofarindex = 0; maxindex = -1; max = 0
   for i in 1...array.length
     temp = [minsofar, array[i]].min
     if(temp != minsofar)
