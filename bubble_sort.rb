@@ -1,10 +1,11 @@
 def bubble_sort(array)
-  i = array.length; j = 1
-  while(i > 0) do
+  i = array.length
+  j = 1
+  while i.positive?
     j = 1
     swap_count = 0
-    while(j < i) do
-      if(array[j - 1] > array[j])
+    while j < i
+      if array[j - 1] > array[j]
         temp = array[j]
         array[j] = array[j - 1]
         array[j - 1] = temp
@@ -12,10 +13,9 @@ def bubble_sort(array)
       end
       j += 1
     end
-    if(swap_count == 0)
-      break
-    end
+    break if swap_count.zero?
+
     i -= 1
   end
-  return array
+  array
 end
